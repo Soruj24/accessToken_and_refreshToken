@@ -12,4 +12,5 @@ authRouter.post('/logout', isLoggedIn, handelLogOut)
 authRouter.post('/protected', handelProtected)
 
 
+
 module.exports = authRouter

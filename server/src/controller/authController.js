@@ -29,7 +29,6 @@ const handelLoginUser = async (req, res, next) => {
                 isAdmin: user.isAdmin,
                 isBanned: user.isBanned,
                 refreshToken
-
             },
         });
     } catch (error) {
@@ -59,7 +58,7 @@ const handelRefreshToken = async (req, res, next) => {
 
         const accessToken = createJSONWebToken({ user: decoded.user },
             jwt_access_secret_key,
-            "5s")
+            "15m")
 
         setAccessCookie(res, accessToken)
 

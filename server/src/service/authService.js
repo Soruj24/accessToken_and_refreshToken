@@ -27,7 +27,7 @@ const loginUser = async (email, password) => {
         const accessToken = createJSONWebToken(
             { user },
             jwt_access_secret_key,
-            "5s")
+            "15m")
 
         // Generate refresh token (valid for 7 days)
         const refreshToken = createJSONWebToken(

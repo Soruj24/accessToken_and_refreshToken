@@ -5,7 +5,7 @@ const setAccessCookie = async (res, user) => {
             httpOnly: true,
             secure: process.env.NODE_ENV === "production", // Ensures the cookie is only sent over HTTPS
             sameSite: "Strict", // Helps prevent CSRF attacks
-            maxAge: 5 * 1000, // Access token expiration (15 minutes)
+            maxAge: 15 * 60 * 1000, // Access token expiration (15 minutes)
         });
 
         return
